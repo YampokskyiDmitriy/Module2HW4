@@ -1,6 +1,8 @@
-﻿using Module2HW4.Models;
-using Module2HW4.Providers.Abstractions;
+﻿using System;
+using Module2HW4.Models;
+using Module2HW4.Helpers;
 using Module2HW4.Services.Abstractions;
+using Module2HW4.Providers.Abstractions;
 
 namespace Module2HW4.Services
 {
@@ -23,9 +25,9 @@ namespace Module2HW4.Services
             Animals = _animalProvider.GetAnimals();
         }
 
-        public Animal FindByWeight()
+        public Animal[] FindByWeight(double weight)
         {
-            throw new System.NotImplementedException();
+            return Animals.FindByWeight(weight);
         }
 
         public Animal[] GetAnimals()
@@ -35,7 +37,8 @@ namespace Module2HW4.Services
 
         public void SortByWeight()
         {
-            throw new System.NotImplementedException();
+            var comparer = new AnimalComparer();
+            Array.Sort(Animals, comparer);
         }
     }
 }

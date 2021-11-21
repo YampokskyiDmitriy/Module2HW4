@@ -8,6 +8,6 @@ namespace Module2HW4.Services.Abstractions
         public Animal[] GetAnimals();
         public void SortByWeight();
         public void Clear();
-        public Animal FindByWeight();
+        public Animal[] FindByWeight(double weight);
     }
 }
