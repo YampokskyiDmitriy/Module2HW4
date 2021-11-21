@@ -9,15 +9,22 @@ namespace Module2HW4.Services
     public class SafariService : ISafariService
     {
         private readonly IAnimalProvider _animalProvider;
-        public SafariService(IAnimalProvider animalProvider)
+        private readonly ICountService _countService;
+        public SafariService(IAnimalProvider animalProvider, ICountService countService)
         {
             _animalProvider = animalProvider;
+            _countService = countService;
         }
 
         private Animal[] Animals { get; set; }
         public void Clear()
         {
            Animals = new Animal[0];
+        }
+
+        public int CountDifferentTypes()
+        {
+            return _countService.CountDifferentTypes(Animals);
         }
 
         public void Fill()

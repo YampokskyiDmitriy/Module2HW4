@@ -9,5 +9,6 @@ namespace Module2HW4.Services.Abstractions
         public void SortByWeight();
         public void Clear();
         public Animal[] FindByWeight(double weight);
+        public int CountDifferentTypes();
     }
 }
