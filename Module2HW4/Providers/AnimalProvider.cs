@@ -16,7 +16,7 @@ namespace Module2HW4.Providers
             {
                 new Scorpion { Name = "Scorpi", Weight = 0.63, ScorpionType = ScorpionType.Imperial },
                 new Spider { Name = "Piter", Weight = 0.33, SpiderType = SpiderType.Hirakantis },
-                new Butterfly { Name = "Batafurii", Weight = 0.12, ButterflyType = ButterflyType.Glossata },
+                new Butterfly { Name = "Batafurii", Weight = 0.33, ButterflyType = ButterflyType.Glossata },
                 new Mantis { Name = "Suicider", Weight = 1.3, MantisType = MantisType.Chaeteessidae },
                 new Elephant { Name = "Dambo", Weight = 412.5, ElephantType = ElephantType.African },
                 new Lion { Name = "Simba", Weight = 170.6, LionType = LionType.EastAfrican },
